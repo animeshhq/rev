@@ -13,8 +13,19 @@ int max(int arr[], int n){
     return max;
 }
 
-int main() {
+int min(int arr[], int n){
+    int min = INT_MAX;
     
+    for(int i=0; i<n;i++){
+        if(arr[i]<min){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+int main() {
+    // Write C++ code here
     int num[100];
     int size;
     cout << "Enter size of array: " << endl;
@@ -25,6 +36,9 @@ int main() {
         cin >> num[i];
     }
     
-    cout << "Max value is: " << max(num, size);
+    cout << "Max value is: " << max(num, size) << endl;
+
+    cout << "Min value is: " << min(num, size);   
+    
     return 0;
 }
